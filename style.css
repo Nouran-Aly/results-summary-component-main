@@ -1,0 +1,174 @@
+:root{
+    /* primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    /* gradiant */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Figtree', sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--White);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 20px;
+    background-color: var(--White); 
+    width: 700px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 1px;
+}
+.container .card .left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: var(--Cobalt-blue);
+    background: linear-gradient( to top,var(--Light-royal-blue),var(--Light-slate-blue));
+    text-align: center;
+    border-radius: 20px;
+}
+.container .card .left-side h3{
+    padding: 10px 0;
+    color: var(--Light-lavender);
+}
+.container .card .left-side .circle{
+    border-radius: 50%;
+    color: var(--White);
+    background: linear-gradient(to top, var(--Persian-blue),var(--Violet-blue));
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .card .left-side .circle h1{
+    color: var(--White);
+    font-size: 50px;
+}   
+.container .card .left-side .circle .small{
+    color: var(--Light-lavender);
+    opacity: 0.5;
+    font-size: 14px;
+}
+.container .card .left-side .great{
+    color: var(--White);
+    font-size: 25px;
+    font-weight: 600;
+}
+.container .card .left-side .content{
+    color: var(--Light-lavender);
+    width: 250px;
+}
+.container .card .right-side{
+    padding: 30px;
+}
+.container .card .right-side .header{
+    color: var(--Dark-gray-blue);
+    padding-bottom: 20px;
+}
+.container .card .right-side .data{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-radius: 15px;
+    margin: 15px 0;
+    width: 100%;
+    font-weight: 800;
+}
+.container .card .right-side .left{
+   display: flex;
+   align-self: center;
+}
+.container .card .right-side .left img{
+    padding-right: 8px;
+}
+.container .card .right-side .right p{
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+}
+.container .card .right-side .right span{
+    color: #b8b8b8;
+}
+#Reaction{
+    background-color: hsl(0, 100%, 67%, 0.1);
+    color: var(--Light-red);
+}
+#Memory{
+    background-color: hsl(39, 100%, 56%, 0.1);
+    color: var(--Orangey-yellow);
+}
+#Verbal{
+    background-color: hsl(166, 100%, 37%, 0.1);
+    color: var(--Green-teal, 0.8);
+}
+#Visual{
+    background-color: hsl(234, 85%, 45%, 0.1);
+    color: var(--Cobalt-blue);
+}
+.btn{
+    display: block;
+    margin: 20px auto 15px;
+    width: 90%;
+    height: 50px;
+    border-radius: 30px;
+    font-weight: 600;
+    background-color: var(--Dark-gray-blue);
+    border-color: none;
+    color: var(--White);
+}
+.btn:hover{
+    background: linear-gradient( to top,var(--Light-royal-blue),var(--Light-slate-blue));
+}
+.attribution{
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 50px 0;
+}
+@media (max-width: 760px) {
+    .container{
+        min-height: 100vh; 
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+      
+        border-radius: 0;
+    }
+    .container .card .left-side{
+        padding-bottom: 50px;
+    }
+    .container .card .left-side{
+        border-radius: 0 0 40px 40px;
+    }
+    .attribution{
+        display: none;
+    }
+}
